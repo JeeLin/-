@@ -1,0 +1,52 @@
+page{
+  background:  #F5F5F5 100%;
+}
+.one{
+  background: #fff;
+  width: 750rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+}
+.one-1{
+  float: left;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:42rpx;
+  padding-left: 30rpx;
+  padding-top: 39rpx;
+}
+.one-2{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-left: 524rpx;
+  margin-top: 10rpx;
+}
+.two{
+  background: #fff;
+  width: 750rpx;
+  height: 88rpx;
+  margin-top: 20rpx;
+}
+.two-1{
+  float: left;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:42rpx;
+  padding-left: 30rpx;
+  padding-top: 23rpx;
+}
+.two-2{
+  float: right;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:42rpx;
+  padding-right: 36rpx;
+  padding-top:23rpx;
+}

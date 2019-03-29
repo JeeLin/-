@@ -1,0 +1,13 @@
+<view class='one' wx:for="{{list}}" bindtap='event1' data-key="{{index}}">
+    <image class='one-1' src='{{pic_head}}{{list[index].cover_url}}'></image>
+  <view class='one-2'>
+    <view class='one-2-1'>{{list[index].title}}</view>
+    <view class='one-2-2'>作者：{{list[index].author}}</view>
+    <view class='one-2-3'>{{list[index].introduction}}</view>  
+  </view>
+</view>
+
+<view class='LoadMore'>
+  <view class='LoadMore' wx:if='{{more}}'>加载中...</view> 
+  <view class='LoadMore' wx:if='{{nomore}}'>我也是有底线的~</view> 
+</view>

@@ -1,0 +1,237 @@
+page {
+  background: #f5f5f5 100%;
+}
+
+.one {
+  background: #fff;
+  margin-top: 2rpx;
+  overflow: hidden;
+}
+
+.two {
+  background: #fff;
+  height: 605rpx;
+}
+
+.three {
+  background: #fff;
+  height: 800rpx;
+}
+
+.phone {
+  padding-top: 22rpx;
+}
+
+.phone-1 {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(169, 169, 169, 1);
+  line-height: 42rpx;
+  padding-left: 50rpx;
+  padding-top: 50rpx;
+}
+
+.phone-2-1 {
+  height: 88rpx;
+  border-bottom: 2px solid #eaeaea;
+  border-radius: 0rpx;
+  margin: 12rpx 50rpx 0rpx 50rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(57, 57, 57, 1);
+  line-height: 48rpx;
+}
+
+.phone-2-2 {
+  height: 68rpx;
+  border-bottom: 2px solid #eaeaea;
+  border-radius: 0rpx;
+  margin: 12rpx 50rpx 0rpx 50rpx;
+  padding-top: 20rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(57, 57, 57, 1);
+  line-height: 48rpx;
+}
+
+/*验证码渲染*/
+
+.id-code {
+  width: 650rpx;
+  margin-left: 50rpx;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.id-code-1 {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(169, 169, 169, 1);
+  line-height: 42rpx;
+  padding-top: 50rpx;
+}
+
+.id-code-2 {
+  height: 88rpx;
+  width: 500rpx;
+  border-radius: 0rpx;
+  margin: 12rpx 50rpx 0rpx 0rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(57, 57, 57, 1);
+  line-height: 48rpx;
+}
+
+.id-code-3 {
+  float: right;
+  position: absolute;
+  width: 250rpx;
+  height: 42rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 203, 0, 1);
+  line-height: 42rpx;
+  right: 50rpx;
+  top: 342rpx;
+}
+
+.id-code-3-1 {
+  float: right;
+}
+
+/*添加图片处渲染*/
+
+.picture {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50rpx;
+  width: 700rpx;
+}
+
+.picture-1 {
+  position: relative;
+  width: 173rpx;
+  height: 173rpx;
+  margin-right: 60rpx;
+  margin-top: 40rpx;
+}
+
+.picture-1-1 {
+  width: 173rpx;
+  height: 173rpx;
+  background: #f1f1f1;
+  position: absolute;
+}
+
+.picture-1-2 {
+  position: relative;
+  width: 56rpx;
+  height: 56rpx;
+  left: 134rpx;
+  top: -14rpx;
+}
+
+/*状态2营业执照渲染*/
+
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  padding-left: 40rpx;
+}
+
+.picture-2 {
+  padding-left: 10rpx;
+  padding-top: 40rpx;
+}
+
+.picture-2-1 {
+  width: 210rpx;
+  height: 288rpx;
+}
+
+.call {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(169, 169, 169, 1);
+  line-height: 42rpx;
+  padding-left: 150rpx;
+  padding-top: 228rpx;
+}
+
+/*状态1添加图片渲染*/
+
+.add-pic {
+  padding-top: 0rpx;
+  display: flex;
+}
+
+.add-pic-1 {
+  width: 173rpx;
+  height: 173rpx;
+  padding-left: 50rpx;
+  padding-top: 40rpx;
+}
+
+.add-pic-2 {
+  width: 481rpx;
+  height: 125rpx;
+  margin-left: 15rpx;
+  padding-top: 60rpx;
+}
+
+.add-pic-2-1 {
+  float: left;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(57, 57, 57, 1);
+  line-height: 42rpx;
+}
+
+.add-pic-2-2 {
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #b0b0b0;
+  line-height: 42rpx;
+}
+
+/*确定按钮渲染*/
+
+.jump{
+  margin: 25rpx 50rpx 0rpx 640rpx;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(8,8,8,1);
+  line-height:42rpx;
+}
+.ensure {
+  margin-top: 25rpx;
+  margin-left: 50rpx;
+  margin-bottom: 70rpx;
+}
+
+.ensure-1 {
+  width: 650rpx;
+  height: 88rpx;
+  background: rgba(255, 206, 15, 1);
+}
+
+.ensure-2 {
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  line-height: 50rpx;
+  text-align: center;
+  padding-top: 19rpx;
+}
+

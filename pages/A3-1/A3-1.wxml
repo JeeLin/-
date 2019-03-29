@@ -1,0 +1,65 @@
+<view class='one'>
+  <view class='phone'>
+    <view class='phone-1'>手机号</view>
+    <view wx:if="{{id==1}}">
+      <input class='phone-2-1' maxlength="11" type="number" placeholder='请输入手机号码' focus='' bindinput='event1'></input>
+    </view>
+    <view class='phone-2-2' wx:if="{{id==2||id==3}}">{{phone}}</view>
+  </view>
+  <view class='id-code' wx:if="{{id==1}}">
+    <view class='id-code-1'>验证码</view>
+    <input class='id-code-2' maxlength="6" type="number" placeholder='请输入验证码' focus='' bindinput='event2'></input>
+    <view wx:if="{{phone.length==11}}">
+      <view class='id-code-3' wx:if="{{!remake}}" bindtap='event3'>
+        <view class='id-code-3-1'>{{time}}</view>
+      </view>
+      <view class='id-code-3' wx:if="{{remake}}">
+        <view class='id-code-3-1'>{{times}}</view>
+      </view>
+    </view> 
+  </view>
+  <view class='mail'>
+    <view class='phone-1'>邮箱号</view>
+    <view wx:if="{{id==1}}">
+      <input class='phone-2-1' placeholder='请输入邮箱号' focus='' bindinput='event4'></input>
+    </view>
+    <view class='phone-2-2' wx:if="{{id==2||id==3}}">{{email}}</view>
+  </view>
+</view>
+
+<view class='two' wx:if="{{id==1}}">
+  <view class='picture'>
+    <view class='picture-1' wx:for="{{picture.length}}">
+      <image class='picture-1-1' src='{{picture[index]}}'></image>
+      <image class='picture-1-2' src='/images/delete.png' data-key="{{index}}" bindtap='event6'></image>
+    </view>
+  </view> 
+  <view class='add-pic' wx:if="{{picture.length<3}}">
+    <view bindtap='event5'>
+      <image class='add-pic-1' src='/images/Group(1).png'></image>
+    </view>
+    <view class='add-pic-2'>
+      <view class='add-pic-2-1'>添加营业执照</view>
+      <view class='add-pic-2-2'>(必填，最多可传3张图片)</view>
+      <view class='add-pic-2-1'>请上传照片或者拍照取图，方便确认</view>
+      <view class='add-pic-2-2'>墨秀会确保你的隐私安全</view>
+    </view>
+  </view>
+  <view class='jump' bindtap='event8'>跳过</view>
+  <view class='ensure' bindtap='event7'>
+    <view class='ensure-1'>
+      <view class='ensure-2'>确定</view>
+    </view>
+  </view>
+</view>
+
+<view class='three' wx:if="{{id==2||id==3}}">
+  <view class='phone-1'>营业执照</view>
+  <view class='pictures'>
+    <view class='picture-2' wx:for="{{picture}}">
+      <image class='picture-2-1' src='{{item}}'></image>
+    </view>
+  </view>
+  <view class='jump' bindtap='event9'>返回</view>
+  <view class='call' bindtap='event10'>联系客服获取视频源文件下载地址</view>
+</view>

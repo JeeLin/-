@@ -1,0 +1,75 @@
+page{
+  background: #F5F5F5 100%;
+}
+
+/*上部渲染内容*/
+.one{
+  background: #fff;
+  width: 750rpx;
+  height: 400rpx;
+  margin-top: 20rpx;
+}
+.one-1{
+  float: left;
+  padding-left: 40rpx;
+  padding-top: 50rpx; 
+  width:220rpx;
+  height:298rpx;
+  }
+.one-2{
+  padding-left: 290rpx;
+  padding-top: 66rpx;
+}
+.one-2-1{
+  width: 358rpx;
+  font-size:40rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:56rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.one-2-2{
+  margin-top: 36rpx;
+  font-size:26rpx;
+  width: 300rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(112,112,112,1);
+  line-height:37rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.one-2-3{
+  width: 365rpx;
+  height: 111rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(112,112,112,1);
+  line-height:37rpx;
+  margin-top: 17rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+/*上拉加载更多动画*/
+.LoadMore{
+  height: 40rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(191,191,191,1);
+  line-height:37rpx;
+  text-align: center;
+}

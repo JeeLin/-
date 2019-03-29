@@ -1,0 +1,32 @@
+page{
+  background: #F5F5F5 100%;
+}
+.us{
+  background: #fff;
+  margin-top: 2rpx;
+}
+.one{
+  display: block;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(81,75,75,1);
+  line-height:46rpx;
+  padding: 26rpx 30rpx 0rpx 30rpx;
+}
+.two{
+  width: 690rpx;
+  height: 459rpx;
+  padding: 29rpx 30rpx 0rpx 30rpx;
+}
+.three{
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(81,75,75,1);
+  line-height:46rpx;
+  padding: 25rpx 30rpx 86rpx 30rpx;
+}
+.three-3{
+  margin-top: 50rpx;
+}

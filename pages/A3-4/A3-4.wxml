@@ -1,0 +1,12 @@
+<view class='us'>
+  <view class='one'>{{text}}</view>
+  <image class='two' src='{{pic}}'></image>
+  <view class='three'>
+    <view class='three-1'>地址：{{add}}</view>
+    <view class='three-2'>add：{{add2}}</view>
+    <view class='three-3'>电话（Tel）:{{line[0].call1}}</view>
+    <view class='three-4'>座机：{{line[0].call2}}</view>
+    <view class='three-5'>邮箱：{{line[0].mail}}</view>
+    <view class='three-6'>邮编：{{line[0].post}}</view>
+  </view>
+</view>

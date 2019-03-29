@@ -1,0 +1,25 @@
+<view class="search">  
+  <view class="search-1">
+    <icon class='search-1-1' type='search'></icon>
+    <input placeholder='输入图书，一键查找' focus='false' bindtap='event3'></input>  
+  </view>  
+</view>  
+
+<view class='left'>
+  <view class="left-1{{curNav == left[index].id?1:2}}" wx:for="{{left}}">
+    <view class='left-1-1' bindtap='event1' data-id="{{left[index].id}}">
+      {{left[index].class}}
+    </view>
+  </view>
+</view>
+
+<view class='right'>
+  <view class='right-1'>图书{{curNav}}</view>
+  <view class='right-2' wx:if="{{right.length>0}}">
+    <view class='right-2-1' wx:for="{{right.length}}" bindtap='event2' data-key="{{right[index].id}}">
+      <image class='right-2-1-1' src="{{pic_head}}{{right[index].cover_url}}"></image>
+      <view class='right-2-1-2'>{{right[index].title}}</view>
+    </view>
+  </view>
+  <view class='right-3' wx:else>该列表暂无内容~</view>
+</view>

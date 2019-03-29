@@ -1,0 +1,8 @@
+view{
+  width: 750rpx;
+  height: 1210rpx;
+}
+.head{
+  width: 750rpx;
+  height: 1210rpx;
+}

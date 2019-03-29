@@ -1,0 +1,47 @@
+<view class="one">
+  <view class='search'>
+    <input class='search-1' placeholder='输入图书，一键查找' focus='{{true}}' bindinput='event1'></input>
+    <view class='search-2' bindtap='event2'>
+      <view class='search-2-1'>搜索</view>
+    </view>
+  </view>
+</view>
+
+<view class='two' wx:for="{{list.length}}" bindtap='event4' data-key="{{list[index].id}}">
+  <view class='two-1'>
+    <image class='pic' src='{{pic_head}}{{list[index].cover_url}}'></image>
+  </view>
+  <view class='two-2'>
+    <view class='title'>{{list[index].title}}</view>
+    <view class='price'>
+      <text class='price-1'>定价：</text><text class='price-2'>¥ </text><text class='price-3'>{{list[index].price}}</text>
+    </view>
+    <view class='author'>
+      <view class='author-1'>作者：{{list[index].author}}</view>
+      <view class='author-1'>出版社： {{list[index].press}}</view>
+      <view class='author-1'>出版时间：{{list[index].published_date}}</view>
+      <view class='author-1'>ISBN：{{list[index].ISBN}}</view>
+    </view>
+  </view>
+</view>
+<view class='twos' wx:if="{{list.length<1}}">
+  <image class='twos-1' src='/images/Bitmap(5).png'></image>
+</view>
+
+<view class='three'>
+  <view class='TuiJian'>
+    <view class='TuiJian-1'>图书推荐</view>
+    <view class='more' bindtap='event3'>查看更多</view>
+  </view>
+  <view class='three-1'>
+    <view class='three-1-1' wx:for="{{list2.length}}" bindtap='event4' data-key="{{list2[index].id}}">
+      <image class="three-1-1-1" src='{{pic_head}}{{list2[index].cover_url}}'></image>
+      <view class='three-1-1-2'>{{list2[index].title}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='LoadMore'>
+  <view class='LoadMore' wx:if='{{more}}'>加载中...</view> 
+  <view class='LoadMore' wx:if='{{nomore}}'>我也是有底线的~</view> 
+</view>

@@ -1,0 +1,9 @@
+<view class='one'>
+  <view class='one-1'>头像</view>
+  <image class='one-2' src="{{headpic}}"></image>
+</view>
+
+<view class='two'>
+  <view class='two-1'>昵称</view>
+   <view class='two-2'>{{name}}</view>
+</view>

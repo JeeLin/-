@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/head/head",
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/mine/mine",
+    "pages/A1-1/A1-1",
+    "pages/A1-2/A1-2",
+    "pages/A2-1/A2-1",
+    "pages/A3-1/A3-1",
+    "pages/A3-2/A3-2",
+    "pages/A3-3/A3-3",
+    "pages/A3-4/A3-4"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "乐童教育",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#F5F5F5 100%"
+  },
+  "tabBar": {
+    "selectedColor": "#EABE10",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/书 (1) (1).png",
+      "selectedIconPath": "images/书 (1).png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "images/classify(1).png",
+      "selectedIconPath": "images/classify.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/我的.png",
+      "selectedIconPath": "images/我的 (1).png"
+    }]
+  }
+}

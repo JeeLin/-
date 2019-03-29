@@ -1,0 +1,217 @@
+page{
+  background: #F5F5F5;
+}
+
+/*第一部分渲染*/
+.one{
+  width: 750rpx;
+  height: 100rpx;
+}
+.search{
+  background: #F5F5F5;
+  padding-left: 20rpx;
+  padding-top: 16rpx;
+}
+.search-1{
+  float: left;
+  background: #fff;
+   /*border: 1px solid #fff;  加了边框后与右边搜索框有2rpx的错位*/
+  width: 562rpx;
+  height: 88rpx;
+  /*输入框里面文字渲染*/
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(111,106,106,1);
+  line-height:42rpx;
+  text-align: center;   
+  border-radius: 0px;
+}
+.search-2{
+  float: left;
+  width: 138rpx;
+  height: 88rpx;
+  background: #FFCE0F;
+  margin-left: 10rpx;
+}
+.search-2-1{
+  font-size:34rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:48rpx;
+  padding-left: 35rpx;
+  padding-top: 20rpx;
+}
+
+/*第二部分渲染*/
+.two{
+  background: #fff;
+  width: 750rpx;
+  height: 480rpx;
+  margin-top: 20rpx;
+}
+.two-1{
+  float: left;
+  padding-left: 40rpx;
+  padding-top: 50rpx; 
+  }
+.pic{
+  width:280rpx;
+  height:379rpx;
+}
+.two-2{
+  padding-left: 356rpx;
+  padding-top: 46rpx;
+}
+.title{
+  width: 358rpx;
+  font-size:40rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:56rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.price{
+  margin-top: 26rpx;
+}
+.price-1{
+  font-size:26rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(112,112,112,1);
+  line-height:37rpx;
+}
+.price-2{
+  font-size:26rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:red;
+  line-height:37rpx;
+}
+.price-3{
+  font-size:35rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:red;
+  line-height:37rpx;
+}
+.author{
+  margin-top: 55rpx;
+}
+.author-1{
+  width: 358rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(112,112,112,1);
+  line-height:37rpx;
+  margin-bottom: 16rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.twos{
+  background: #fff;
+  width: 750rpx;
+  height: 480rpx;
+  margin-top: 20rpx;
+}
+.twos-1{
+  width: 750rpx;
+  height: 480rpx;
+}
+
+/*第三部分渲染*/
+.three{
+  margin-top: 20rpx;
+}
+.TuiJian{
+  background: #fff;
+  width: 750rpx;
+  height: 68rpx;
+}
+.TuiJian-1{
+  float: left;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:42rpx;
+  padding-top: 13rpx;
+  padding-left: 48rpx;
+}
+.TuiJian-1::before{
+  position: absolute;
+  content: '';
+  background: #FFCE0F;
+  width: 10rpx;
+  height: 40rpx;
+  left: 8rpx;
+}
+.more{
+  float: right;
+  width:112rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(93,93,93,1);
+  line-height:40rpx;
+  padding-right: 20rpx;
+  padding-top: 15rpx;
+  text-decoration: underline;
+}
+.three-1{
+  display: flex;
+  flex-wrap: wrap;
+}
+.three-1-1{
+  background: #fff;
+  width: 249rpx;
+  height: 387rpx;
+  margin-top: 2rpx;
+  margin-left: 0rpx;
+  border-right: 1rpx solid #eee;
+}
+.three-1-1-1{
+  width: 208rpx;
+  height: 284rpx;
+  padding-left: 20rpx;
+  padding-top: 18rpx;
+}
+.three-1-1-2{
+  display: block;
+  width: 193rpx;
+  height: 40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(34,32,32,1);
+  padding-left: 31rpx;
+  padding-top: 9rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+/*上拉加载更多动画*/
+.LoadMore{
+  height: 40rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(191,191,191,1);
+  line-height:37rpx;
+  text-align: center;
+}

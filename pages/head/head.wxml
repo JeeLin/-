@@ -1,0 +1,3 @@
+<view bindtap='load'>
+  <image class='head' src='/images/head.png'></image>
+</view>

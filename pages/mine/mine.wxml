@@ -1,0 +1,47 @@
+<view class='one'>
+  <view class="userinfo">
+    <view class='getUserInfo' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <button>获取头像昵称</button>
+    </view>
+    <block wx:else>
+      <image bindtap="event1" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+      <view wx:if="{{id==1}}" class='id1'>
+        <image class='id1-1' src="/images/vip.png"></image>
+        <view class='id1-2'>园长</view>
+        <view class='id1-3' bindtap='event2'>
+          <view class='id1-3-1'>去认证</view>
+        </view>
+      </view>
+      <view wx:if="{{id==2}}" class='id2'>
+        <image class='id1-1' src="/images/vip.png"></image>
+        <view class='id1-2'>园长</view>
+        <view class='id2-3' bindtap='event2'>
+          <view class='id2-3-1'>认证中</view>
+        </view>
+      </view>
+      <view wx:if="{{id==3}}" class='id3'>
+        <image class='id1-1' src="/images/vip(1).png"></image>
+        <view class='id3-2' bindtap='event2'>园长</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class='two' bindtap='event3'>
+  <image class='two-1' src='/images/Group2.png'></image>
+  <view class='two-2'>我的收藏</view>
+  <image class='two-3' src='/images/into.png'></image>
+</view>
+
+<view class='three' bindtap='event4'>
+  <image class='two-1' src='/images/Group6.png'></image>
+  <view class='two-2'>联系客服</view>
+  <image class='two-3' src='/images/into.png'></image>
+</view>
+
+<view class='four' bindtap='event5'>
+  <image class='two-1' src='/images/Group.png'></image>
+  <view class='two-2'>关于我们</view>
+  <image class='two-3' src='/images/into.png'></image>
+</view>

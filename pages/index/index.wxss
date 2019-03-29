@@ -1,0 +1,187 @@
+page{
+  background: #F5F5F5 100%;
+}
+
+/*搜索框*/
+.search{  
+  width: 100%;  
+  background: #fff;
+  height: 123rpx;
+  padding-top: 20rpx;
+}  
+.search-1 { 
+  background: #F5F5F5; 
+  border: 1px solid #fff;  
+  border-radius: 100rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 23rpx;
+}  
+.search-1 input{  
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(111,106,106,1);
+  line-height:42rpx;
+  padding-left: 97rpx;
+  /*text-align: center; */
+  height: 88rpx;  
+  border-radius: 5px;  
+}
+.search-1-1{
+  size: 50rpx;
+  padding-left: 37rpx;
+  padding-top:23rpx;
+  position: absolute;
+}
+
+/*棱波图+图书推荐+查看更多*/
+.swiper{
+  background: #fff;
+  height: 310rpx;
+  padding: 20rpx 30rpx 0rpx 30rpx;
+}
+swiper{
+  width: 690rpx;
+  height:310rpx;
+}
+swiper image{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+.book-id{
+  width: 750rpx;
+  height: 205rpx;
+  background: #fff;
+}
+.book-id-1{
+  width:272rpx;
+  height:48rpx;
+  font-size:34rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:48rpx;
+  padding-left: 35rpx;
+  padding-top: 41rpx;
+}
+.book-id-2{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10rpx;
+}
+.book-id-2-1{
+  width:84rpx;
+  height:66rpx;
+  background:rgba(255,255,255,1);
+  border-radius:4rpx;
+  border:2rpx solid rgba(247,64,3,1);
+  margin-left: 20rpx;
+  margin-top: 28rpx;
+  text-align: center;
+  padding-top: 18rpx;
+}
+.book-id-2-2{
+  width:150rpx;
+  height:68rpx;
+  background:rgba(255,90,15,1);
+  border-radius:11rpx;
+  margin-left: 20rpx;
+  margin-top: 28rpx;
+  font-size:34rpx;
+  font-family:PingFangSC-Semibold;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:48rpx;
+  text-align: center;
+  padding-top: 20rpx;
+}
+.book-id-3{
+  height: 0rpx;
+  width: 0rpx;
+}
+
+.three{
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  background: #fff;
+  height: 100rpx;
+}
+.three-1{
+  display: block;
+  padding-left: 30rpx;
+  padding-top: 42rpx;
+}
+.three-1-1{
+  width:120rpx;
+  height:42rpx;
+  font-size:30rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+  line-height:42rpx;
+}
+.three-2{
+  display: block;
+  padding-left: 458rpx;
+  padding-top: 44rpx;
+}
+.three-2-1{
+  width:112rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(93,93,93,1);
+  line-height:40rpx;
+  text-decoration: underline;
+}
+
+/*列表*/
+.list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-1{
+  background: #fff;
+  margin-top: 3rpx;
+  margin-left: 0rpx;
+  width: 249rpx;
+  height: 403rpx;
+  border-right: 1rpx solid #eee;
+}
+.list-1-1{
+  width: 209rpx;
+  height: 285rpx;
+  padding: 18rpx 21rpx 0rpx 20rpx;
+}
+.list-1-2{
+  display: block;
+  width: 193rpx;
+  height: 40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(34,32,32,1);
+  padding-left: 31rpx;
+  padding-top: 9rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+/*上拉加载更多动画*/
+.LoadMore{
+  height: 40rpx;
+  font-size:26rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(191,191,191,1);
+  line-height:37rpx;
+  text-align: center;
+}
