@@ -40,9 +40,16 @@
 			"current": 0,
 			"list": [
 				{
+					"id": 0,
+					"name": "测试",
+					"pathName": "pages/head/head",
+					"query": ""
+				},
+				{
 					"id": -1,
-					"name": "A1-2",
-					"pathName": "pages/A1-2/A1-2"
+					"name": "我的",
+					"pathName": "pages/A3-1/A3-1",
+					"query": ""
 				}
 			]
 		}

@@ -7,8 +7,8 @@ Page({
    */
   data: {
     currentTime:2,
-
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,21 +26,26 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    var that = this
-    var currentTime = that.data.currentTime
-    interval = setInterval(function () {
-      currentTime--;
-      if (currentTime <= 0) {
-        clearInterval(interval)
-        wx.switchTab({
-          url: '../index/index',
-        })
-        that.setData({
-          currentTime: 2,
-        })
-      }
-    }, 1000)
+ onShow: function () {
+  //   var that = this
+  //   var currentTime = that.data.currentTime
+  //   interval = setInterval(function () {
+  //     currentTime--;
+  //     if (currentTime <= 0) {
+  //       clearInterval(interval)
+  //       wx.switchTab({
+  //         url: '../index/index',
+  //       })
+  //       that.setData({
+  //         currentTime: 2,
+  //       })
+  //     }
+  //   }, 1000)
+    setTimeout(function () {
+     wx.redirectTo({
+      url: '../index/index'
+     })
+    }, 2000)
   },
 
   /**
@@ -56,28 +61,6 @@ Page({
   onUnload: function () {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
 
   load: function () {
     wx.switchTab({
