@@ -1,5 +1,5 @@
 // pages/A1-1/A1-1.js
-// const app = getApp();
+const app = getApp();
 Page({
 
   /**

@@ -1,7 +1,7 @@
 <view class="search">  
   <view class="search-1">
     <icon class='search-1-1' type='search'></icon>
-    <input placeholder='输入图书，一键查找' focus='false' bindtap='event5'></input>  
+    <input placeholder='输入图书，一键查找' focus='false' bindtap='textSearch'></input>  
   </view>  
 </view> 
 
@@ -9,38 +9,39 @@
   <swiper indicator-dots="flase" autoplay="true" interval="5000" duration="1000" circular="true">
     <block wx:for="{{imgUrls.length}}">
       <swiper-item>
-        <image src="{{pic_head}}{{imgUrls[index].image_url}}" class="slide-image" />
+        <image src="{{headPath}}{{imgUrls[index].image_url}}" class="slide-image" />
       </swiper-item>
     </block>
   </swiper>
 </view>
 
-<view class='book-id'>
-  <view class='book-id-1'>输入编码观看视频</view>
-  <view class='book-id-2'>
-    <view class='book-id-2-1' wx:for="12345" bindtap='event4'>{{Value[index]}}</view>
-    <view class='book-id-2-2' bindtap='event6'>查询</view>
+<view class='code'>
+  <view class='code-1'>输入编码观看视频</view>
+  <view class='code-2'>
+    <view class='code-2-1' wx:for="12345" bindtap='codeSearch'>{{Value[index]}}</view>
+    <view class='code-2-2' bindtap='search'>查询</view>
   </view>
-  <input class='book-id-3' maxlength="5" type="number" bindinput='event3' focus="{{isFocus}}"></input>
+  <input class='code-3' maxlength="5" type="number" bindinput='getCode' focus="{{isFocus}}"></input>
 </view>
 
-<view class='three'>
-  <view class='three-1'>
-    <text class='three-1-1'>图书推荐</text>
+<view class='recommendation'>
+  <view class='recommendation-1'>
+    <text class='recommendation-1-1'>图书推荐</text>
   </view>
-  <view class='three-2' bindtap='event1'>
-    <text class='three-2-1'>查看更多</text>
-  </view>
-</view>
-
-<view class='list'>
-  <view class='list-1' bindtap='event2' wx:for="{{list}}" data-key="{{list[index].id}}">
-    <image class='list-1-1' src='{{pic_head}}{{list[index].cover_url}}'></image>
-    <view class='list-1-2'>{{list[index].title}}</view>
+  <view class='recommendation-2' bindtap='toClassify'>
+    <text class='recommendation-2-1'>查看更多</text>
   </view>
 </view>
 
-<view class='LoadMore'>
-  <view class='LoadMore' wx:if='{{more}}'>加载中...</view> 
-  <view class='LoadMore' wx:if='{{nomore}}'>我也是有底线的~</view> 
+<view class='detail'>
+  <view class='detail-1' bindtap='bookDetail' bindlongpress='disincline' wx:for="{{list}}" data-key="{{list[index].id}}">
+    <image class='detail-1-1' src='{{headPath}}{{list[index].cover_url}}'></image>
+    <view class='detail-1-2'>{{list[index].title}}</view>
+  </view>
 </view>
+
+<!-- <view class='LoadMore'>
+  <view class='LoadMore' wx:if='{{more==ture}}'>加载中...</view> 
+  <view class='LoadMore' wx:if='{{more==flase}}'>我也是有底线的~</view> 
+</view> 
+触底提醒没做-->

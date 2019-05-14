@@ -1,66 +1,78 @@
 //index.js
-//获取应用实例
 const app = getApp()
-
 Page({
   data: {
-    imgUrls: "",
+    imgUrls: "",  //轮播图
 
-    //data1: '/images/Bitmap (1).png',
-    //data2:'儿童文学'，
-
-    list:[],
-    pic_head: app.globalData.url,
-    page:2,
+    list:[], //推荐 书籍
+    headPath: app.globalData.headPath,
+    page: 2,
+    lastPage:6,
+    more: true,
 
     inputValue: [],
     value: "",
     isFocus : true,
-    bookid:"",
-
-    more:null,
-    nomore:null,
-    from2: null,
+    bookid:""
   },
 
-  event3(e){
-    var that = this;
-    console.log(e.detail.value);
-    var inputValue = e.detail.value;
-    that.setData({
-      value: inputValue, 
+  onLoad: function () {
+    var that = this
+    //轮播图获取
+    wx.request({
+      url: 'http://39.108.180.53/api/v1/banner',
+      success: function (res) {
+        that.setData({
+          imgUrls: res.data
+        })
+      }
+    })
+    //推荐内容获取
+    wx.request({
+      url: 'http://39.108.180.53/api/v1/recommend',
+      data: {
+        user_id: app.globalData.user_id
+      },
+      success: function (res) {
+        that.setData({
+          list: res.data.data,
+          lastPage: res.last_page
+        })
+      }
     })
   },
-  //编码搜索框输入
-  event4(){
-    var that = this;
-    that.setData({
-      isFocus: true,
-    }) 
-  },
-  //文字搜索栏
-  event5:function(){
+
+  //文字搜索栏,直接跳转A2-1
+  textSearch: function () {
     wx.navigateTo({
       url: '../A2-1/A2-1',
     })
   },
-  event6: function () {
-    var that=this
+
+  //编码搜索框输入
+  codeSearch() {
+    var that = this;
+    that.setData({
+      isFocus: true,
+    })
+  },
+  //点击编码查询键
+  search: function () {
+    var that = this
     wx.request({
       url: 'http://39.108.180.53/api/v1/search/code',
       data: {
         code: that.data.value
       },
       success: function (e) {
-        console.log(e)
-        var condition=e.data
-        if(condition==0){
+        var condition = e.data
+        if (condition == 0) {
           wx.showToast({
             title: '视频编码错误',
             icon: 'none',
             duration: 1000,
           })
-        }else{
+        } else {
           that.setData({
             bookid: e.data[0].book_id
           })
@@ -69,13 +81,22 @@ Page({
           })
         }
       },
-      fail:function(e){
+      fail: function (e) {
       }
     })
   },
-
+  //获取输入的视频代码
+  getCode(e){
+    var that = this;
+    console.log(e.detail.value);
+    var inputValue = e.detail.value;
+    that.setData({
+      value: inputValue, 
+    })
+  },
+  
   //跳转到tab页面使用wx:switchTab跳转
-  event1:function(){
+  toClassify:function(){
     wx:wx.switchTab({
       url: '../classify/classify',
       success: function(res) {},
@@ -83,9 +104,9 @@ Page({
       complete: function(res) {},
     })
   },
+  //跳转图书详情页
   //页面跳转及数据获取方法1：navigateTo可以返回原页面（保留当前页面），redirectTo不能返回原页面（关闭当前页面）
-  event2:function(e){
-    console.log(e)
+  bookDetail:function(e){
     wx.navigateTo({
       url: '../A1-1/A1-1?id='+e.currentTarget.dataset.key,
       success: function(res) {},
@@ -93,65 +114,46 @@ Page({
       complete: function(res) {},
     })
   },
+  //长按不感兴趣    未完成访问
+  disincline:function(e){
+    var that = this;
+    console.log(e.currentTarget.dataset.key)
+    wx.showActionSheet({
+      itemList: ['不感兴趣'],
+      success(res) {
+        console.log('不感兴趣')
+        //访问/return/disincline，扣除兴趣分
+      },
+      fail(res) {
+        console.log('取消')
+      },
+    });
+  },
 
   //上拉加载更多
   onReachBottom:function(){
-    var that=this 
-    that.setData({
-      more: 1,
-      nomore: 0,
-    })
-    console.log("加载更多")
+    var that = this;
     wx.request({
       url: 'http://39.108.180.53/api/v1/recommend',
       data: {
+        user_id: app.globalData.user_id,
         page: that.data.page
       },
       success: function (res) {
-        console.log('---是否有数据---'+res.data.from)
-        var from = res.data.from
-        if(from==that.data.from2){
+        console.log(that.data.lastPage)
+        var next = res.next_page_url;
+        console.log(next)
+        if(!next){
           that.setData({
-            nomore:1,
-            more:0,
+            more: false
           })
-        }else{
-          that.setData({
-            list: that.data.list.concat(res.data.data),
-            page: res.data.current_page + 1,
-            more: 0,
-          })
-          console.log(that.data.page)
-        } 
-      }
-    })
-  },
-
-  onLoad:function(){
-    var that = this 
-    wx.request({
-      url: 'http://39.108.180.53/api/v1/banner',
-      success:function(res){
-        //console.log(res)
+        }
         that.setData({
-          imgUrls:res.data,
-          nomore:0,
+          list: that.data.list.concat(res.data.data),
+          page: that.data.page+1
         })
-        console.log(that.data.imgUrls)
+        console.log(that.data.more)
       }
     })
-    wx.request({
-      url: 'http://39.108.180.53/api/v1/recommend',
-      data:{
-        page:1
-      },
-      success: function (res) {
-        console.log(res.data)
-        that.setData({
-          list: res.data.data,
-        })
-        //console.log(that.data.list)
-      }
-    })
-  },
+  }
 })

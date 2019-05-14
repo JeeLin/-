@@ -51,12 +51,12 @@ swiper image{
   height:100%;
 }
 
-.book-id{
+.code{
   width: 750rpx;
   height: 205rpx;
   background: #fff;
 }
-.book-id-1{
+.code-1{
   width:272rpx;
   height:48rpx;
   font-size:34rpx;
@@ -67,12 +67,12 @@ swiper image{
   padding-left: 35rpx;
   padding-top: 41rpx;
 }
-.book-id-2{
+.code-2{
   display: flex;
   flex-wrap: wrap;
   padding-left: 10rpx;
 }
-.book-id-2-1{
+.code-2-1{
   width:84rpx;
   height:66rpx;
   background:rgba(255,255,255,1);
@@ -83,7 +83,7 @@ swiper image{
   text-align: center;
   padding-top: 18rpx;
 }
-.book-id-2-2{
+.code-2-2{
   width:150rpx;
   height:68rpx;
   background:rgba(255,90,15,1);
@@ -98,24 +98,24 @@ swiper image{
   text-align: center;
   padding-top: 20rpx;
 }
-.book-id-3{
+.code-3{
   height: 0rpx;
   width: 0rpx;
 }
 
-.three{
+.recommendation{
   display: flex;
   flex-wrap: wrap;
   width: 750rpx;
   background: #fff;
   height: 100rpx;
 }
-.three-1{
+.recommendation-1{
   display: block;
   padding-left: 30rpx;
   padding-top: 42rpx;
 }
-.three-1-1{
+.recommendation-1-1{
   width:120rpx;
   height:42rpx;
   font-size:30rpx;
@@ -124,12 +124,12 @@ swiper image{
   color:rgba(0,0,0,1);
   line-height:42rpx;
 }
-.three-2{
+.recommendation-2{
   display: block;
   padding-left: 458rpx;
   padding-top: 44rpx;
 }
-.three-2-1{
+.recommendation-2-1{
   width:112rpx;
   height:40rpx;
   font-size:28rpx;
@@ -141,11 +141,11 @@ swiper image{
 }
 
 /*列表*/
-.list{
+.detail{
   display: flex;
   flex-wrap: wrap;
 }
-.list-1{
+.detail-1{
   background: #fff;
   margin-top: 3rpx;
   margin-left: 0rpx;
@@ -153,12 +153,12 @@ swiper image{
   height: 403rpx;
   border-right: 1rpx solid #eee;
 }
-.list-1-1{
+.detail-1-1{
   width: 209rpx;
   height: 285rpx;
   padding: 18rpx 21rpx 0rpx 20rpx;
 }
-.list-1-2{
+.detail-1-2{
   display: block;
   width: 193rpx;
   height: 40rpx;
