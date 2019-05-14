@@ -9,11 +9,12 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
-	"appid": "wx05ec004cf176af1d",
+	"libVersion": "2.6.6",
+	"appid": "wxffefb154a68d3118",
 	"projectname": "%E4%B9%90%E7%AB%A5",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -42,7 +43,7 @@
 				{
 					"id": 0,
 					"name": "测试",
-					"pathName": "pages/head/head",
+					"pathName": "pages/index/index",
 					"query": ""
 				},
 				{

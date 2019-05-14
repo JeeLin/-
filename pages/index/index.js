@@ -5,22 +5,16 @@ const app = getApp()
 Page({
   data: {
     imgUrls: "",
-    indicatorDots: false,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000,
-    circular: true,
 
     //data1: '/images/Bitmap (1).png',
-    //data2:'儿童文学',
-    
+    //data2:'儿童文学'，
 
     list:[],
-    pic_head: "http://39.108.180.53/",
+    pic_head: app.globalData.url,
     page:2,
 
     inputValue: [],
-    Value: "",
+    value: "",
     isFocus : true,
     bookid:"",
 
@@ -34,15 +28,17 @@ Page({
     console.log(e.detail.value);
     var inputValue = e.detail.value;
     that.setData({
-      Value: inputValue, 
+      value: inputValue, 
     })
   },
+  //编码搜索框输入
   event4(){
     var that = this;
     that.setData({
       isFocus: true,
     }) 
   },
+  //文字搜索栏
   event5:function(){
     wx.navigateTo({
       url: '../A2-1/A2-1',
@@ -53,7 +49,7 @@ Page({
     wx.request({
       url: 'http://39.108.180.53/api/v1/search/code',
       data: {
-        code: that.data.Value
+        code: that.data.value
       },
       success: function (e) {
         console.log(e)

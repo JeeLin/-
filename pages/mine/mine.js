@@ -1,4 +1,4 @@
-const app = getApp()
+const app = getApp();
 
 // pages/mine/mine.js
 Page({

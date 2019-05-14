@@ -1,4 +1,5 @@
 // pages/A1-1/A1-1.js
+// const app = getApp();
 Page({
 
   /**
@@ -88,6 +89,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this
+    // console.log(app.global.userInfo)
     console.log(options)
     that.setData({
       no:options.id

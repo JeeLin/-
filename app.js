@@ -34,6 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    basePath: "http://39.108.180.53/",
+    user_id: null
   },
 })

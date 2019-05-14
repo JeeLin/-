@@ -6,7 +6,7 @@
 </view> 
 
 <view class='swiper'>
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <swiper indicator-dots="flase" autoplay="true" interval="5000" duration="1000" circular="true">
     <block wx:for="{{imgUrls.length}}">
       <swiper-item>
         <image src="{{pic_head}}{{imgUrls[index].image_url}}" class="slide-image" />
